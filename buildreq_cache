@@ -1,0 +1,10 @@
+0.1.9
+glib-dev
+gnutls-dev
+gpgme-dev
+json-glib-dev
+pkgconfig(gio-2.0)
+pkgconfig(gnutls)
+pkgconfig(gobject-introspection-1.0)
+pkgconfig(json-glib-1.0)
+vala
