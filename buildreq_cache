@@ -1,5 +1,6 @@
-0.1.9
+0.1.10
 glib-dev
+gmp-dev
 gnutls-dev
 gpgme-dev
 json-glib-dev
