@@ -6,10 +6,10 @@
 # autospec commit: c1050fe
 #
 Name     : libjcat
-Version  : 0.1.14
-Release  : 7
-URL      : https://github.com/hughsie/libjcat/archive/0.1.14/libjcat-0.1.14.tar.gz
-Source0  : https://github.com/hughsie/libjcat/archive/0.1.14/libjcat-0.1.14.tar.gz
+Version  : 0.2.0
+Release  : 8
+URL      : https://github.com/hughsie/libjcat/archive/0.2.0/libjcat-0.2.0.tar.gz
+Source0  : https://github.com/hughsie/libjcat/archive/0.2.0/libjcat-0.2.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -106,10 +106,10 @@ tests components for the libjcat package.
 
 
 %prep
-%setup -q -n libjcat-0.1.14
-cd %{_builddir}/libjcat-0.1.14
+%setup -q -n libjcat-0.2.0
+cd %{_builddir}/libjcat-0.2.0
 pushd ..
-cp -a libjcat-0.1.14 buildavx2
+cp -a libjcat-0.2.0 buildavx2
 popd
 
 %build
@@ -117,7 +117,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1702015769
+export SOURCE_DATE_EPOCH=1704208870
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -184,7 +184,10 @@ DESTDIR=%{buildroot} ninja -C builddir install
 %defattr(-,root,root,-)
 /usr/include/libjcat-1/jcat.h
 /usr/include/libjcat-1/libjcat/jcat-blob.h
+/usr/include/libjcat-1/libjcat/jcat-bt-checkpoint.h
+/usr/include/libjcat-1/libjcat/jcat-bt-verifier.h
 /usr/include/libjcat-1/libjcat/jcat-common.h
+/usr/include/libjcat-1/libjcat/jcat-compile.h
 /usr/include/libjcat-1/libjcat/jcat-context.h
 /usr/include/libjcat-1/libjcat/jcat-engine.h
 /usr/include/libjcat-1/libjcat/jcat-file.h
@@ -216,6 +219,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/libexec/installed-tests/libjcat/colorhug/firmware.bin.ed25519
 /usr/libexec/installed-tests/libjcat/colorhug/firmware.bin.p7b
 /usr/libexec/installed-tests/libjcat/colorhug/firmware.bin.p7c
+/usr/libexec/installed-tests/libjcat/colorhug/firmware.bin.sha256.p7c
 /usr/libexec/installed-tests/libjcat/jcat-self-test
 /usr/libexec/installed-tests/libjcat/pki/GPG-KEY-Linux-Vendor-Firmware-Service
 /usr/libexec/installed-tests/libjcat/pki/LVFS-CA.pem
